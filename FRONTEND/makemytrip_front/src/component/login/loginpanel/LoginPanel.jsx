@@ -58,24 +58,8 @@ export const LoginPanel = ({ handleClick, handleUser }) => {
 
   const checkIsUserExist=(mob)=>{
 
-    //console.log(mob)
-    //fetch user from database using mobile number
-    // let user = {
-    //   name:"Rahul yadav",
-    //   password:"rahul@123"
-    // }
-    // setFindUser(user)
-    // handleClick()
-    // setIsUserExist(true)
-
-    //if found user then  call handleuser(gotuser)
-    
-    
-    //set user false
-
     setIsUserExist(false)
-    //
-
+  
   }
 
   const [state,setState] = useState({
