@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+### MakeMyTrip Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+- This project is a clone of the MakeMyTrip website, developed as a part of the Fynd Academy Fullstack MERN
+  Development course. The project focuses on building a responsive frontend using React and Bootstrap, and a robust backend using Node.js and Express.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Home Page: A welcoming page with search functionality.
+- Search Page: Displays available flight options based on user input.
+- Booking Page: Allows users to book selected flights.
+- Responsive Design: Ensures usability across various devices.
+- Navigation Bar: Easy access to different sections of the website.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend: React, Bootstrap
+- Backend: Node.js, Express
+- Database: MongoDB
+- Others: JWT for authentication
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Node.js: Ensure you have Node.js installed. You can download it from Node.js official website.
+    MongoDB: Make sure you have MongoDB installed and running.
 
-### `npm run build`
+## Environment Variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Create a .env file in the root directory of the backend folder and add the following environment variables:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone the Repository
+- First, clone this repository to your local machine:
 
-### `npm run eject`
+## Backend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Navigate to the backend directory:
+- Install backend dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  npm install
+  [ Start the backend server: ]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  `node index.js`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Frontend Setup
 
-## Learn More
+- Open a new terminal and navigate to the frontend directory:
+- Install frontend dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  npm install
+  [ Start the frontend development server: ]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  `npm start`
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Once both the backend and frontend servers are running, you can access the application at your local host (or another port if configured).
