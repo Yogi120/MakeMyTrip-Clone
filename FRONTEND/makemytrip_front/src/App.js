@@ -27,7 +27,7 @@ import HotelBookingDetails from "./component/MyTrips/HotelBookingDetails";
 import Admin from "./component/Admin/Admin";
 
 function App() {
-  let apiBaseUrl = "https://make-my-trip-clone-backend-two.vercel.app/api/";
+  let apiBaseUrl = "https://make-my-trip-clone-backend-tawny.vercel.app/api/";
   //let apiBaseUrl = "http://localhost:5000/api/";
 
   const [to, setTo] = useState("");
