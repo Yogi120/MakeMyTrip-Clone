@@ -76,7 +76,7 @@ export default function UserForm() {
     e.preventDefault();
     console.log('clicked')
     axios
-      .post("https://make-my-trip-clone-backend-two.vercel.app/api/auth/Register", newUser)
+      .post("https://make-my-trip-clone-backen-git-24059a-yogesh-s-projects-b9eacb0a.vercel.app/api/auth/Register", newUser)
       .then((res) => {
         alert("Signup Success");
         localStorage.setItem("token", res.data.token);
