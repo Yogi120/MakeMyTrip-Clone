@@ -22,6 +22,7 @@ const allowedOrigins = [
 
 //app.use(cors());
 app.use(cors({
+<<<<<<< HEAD
   origin: function (origin, callback) {
       // Allow requests with no origin, like mobile apps or curl requests
       if (!origin) return callback(null, true);
@@ -35,6 +36,12 @@ app.use(cors({
   },
   credentials: true // Allow cookies for authenticated requests (if applicable)
 }));
+=======
+    origin: "https://make-my-trip-clone-frontend.vercel.app", // Replace with your React app's domain
+// origin : "http://localhost:3000",
+    credentials: true // Allow cookies for authenticated requests (if applicable)
+  }));
+>>>>>>> 82183de97d72488fc8b1d94bdc793f497148c8e8
 
 // Define Routes
 app.get('/',(req,res)=>{
