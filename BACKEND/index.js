@@ -11,7 +11,7 @@ const start = async () => {
     await connectDB();
     app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 };
-start();
+
 app.use(express.json({ extended: false }));
 
 
@@ -34,5 +34,5 @@ app.use('/api/searchFlight', require('./routes/searchFlightRoutes'));
 app.use('/api/searchHotel', require('./routes/searchHotelRoutes'));
 app.use('/api', require('./routes/bookingRoutes'));
 app.use('/api', hotelBookingRoutes);
-
+start();
 module.exports = app;
