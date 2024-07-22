@@ -15,11 +15,11 @@ start();
 app.use(express.json({ extended: false }));
 
 
-//app.use(cors());
-app.use(cors({
-    origin: 'https://make-my-trip-clone-gamma.vercel.app', // Replace with your React app's domain
-    credentials: true // Allow cookies for authenticated requests (if applicable)
-  }));
+app.use(cors());
+//app.use(cors({
+  //  origin: 'https://make-my-trip-clone-gamma.vercel.app', // Replace with your React app's domain
+    //credentials: true // Allow cookies for authenticated requests (if applicable)
+  //}));
 
 // Define Routes
 app.get('/',(req,res)=>{
