@@ -23,25 +23,24 @@ const Style = styled.div`
   .login-wrap {
     top: 50%;
     left: 50%;
-    bottom: auto; /* Adjusted to auto for better centering */
-    right: auto; /* Adjusted to auto for better centering */
+    bottom: 0;
+    right: 0;
     width: 480px;
     height: auto;
     min-height: 500px;
-    padding: 40px 50px; /* Adjusted padding */
+    padding: 30px;
     min-width: 450px;
-    border-radius: 12px; /* Slightly increased border-radius */
+    border-radius: 10px;
     position: fixed;
     z-index: 2;
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
-    color: white; /* Changed text color to white for better contrast */
+    background-color: #fff;
+    color: black;
     transform: translate(-50%, -50%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Larger and darker box-shadow */
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 40%);
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Increased gap for more spacing */
+    gap: 10px;
   }
-
   .close {
     font-size: 20px;
     text-align: right;
