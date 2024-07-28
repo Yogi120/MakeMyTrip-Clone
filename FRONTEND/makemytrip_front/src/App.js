@@ -64,14 +64,6 @@ function App() {
               <Route path="/Search" element={<Search />} />
               <Route path="/Flights" element={<Search />} />
               <Route path="/Hotels" element={<HotelSearch />} />
-              {/* <Route path="/Homestays" element={<UnderConstruction />} />
-              <Route path="/Holidaypackages" element={<UnderConstruction />} />
-              <Route path="/Trains" element={<UnderConstruction />} />
-              <Route path="/Buses" element={<UnderConstruction />} />
-              <Route path="/Cabs" element={<UnderConstruction />} />
-              <Route path="/Visa" element={<UnderConstruction />} />
-              <Route path="/CahrterFlights" element={<UnderConstruction />} />
-              <Route path="/Activities" element={<UnderConstruction />} /> */}
               <Route path="/Admin/FlightList" element={<FlightsList />} />
               <Route path="/admin/flight" element={<FlightsList />} />
               <Route path="/admin/hotel" element={<HotelsList />} />

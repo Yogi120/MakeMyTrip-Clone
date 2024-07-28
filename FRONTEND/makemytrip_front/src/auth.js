@@ -18,20 +18,7 @@ class Auth {
 		if (accessToken && refreshToken) {
 			return (this.authenticated = true);
 		}
-		// if (!accessToken && refreshToken) {
-		// 	axios
-		// 		.post('http://localhost:4000/refresh', {
-		// 			withCredentials: true
-		// 		})
-		// 		.then(function(res) {
-		// 			console.log(res.data);
-					
-		// 			window.location.reload();
-		// 		})
-		// 		.catch(function(error) {
-		// 			console.log(error.response);
-		// 		});
-		// }
+		
 	}
 }
 
