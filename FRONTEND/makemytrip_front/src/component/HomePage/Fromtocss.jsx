@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Fromtocss = styled.div`
   width: 95%;
   margin: 20px auto;
