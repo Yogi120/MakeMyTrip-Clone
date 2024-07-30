@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const Navbar = styled.div`
   height: 500px;
 
-  background-image: url("https://images.unsplash.com/photo-1583364501903-49485df18877?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/bg6.jpg");
 
   .laltain {
     position: absolute;
