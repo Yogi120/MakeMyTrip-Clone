@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const Fromtocss = styled.div`
-  width: 95%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #d4d0d0;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // width: 95%;
+  // margin: 10px auto;
+  // padding: 20px;
+  // // border: 1px solid #d4d0d0;
+  // border-radius: 12px;
+   background-color: #fff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 
   .trip-type {
     display: flex;

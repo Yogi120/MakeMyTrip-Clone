@@ -92,11 +92,12 @@ export const Main = () => {
               <input type="checkbox" value="2" />
               <label htmlFor="">ROUNDWAY</label>
             </div>
-            <div>INTERNATIONAL FLIGHTS | DOMESTIC FLIGHTS</div>
+            <div>INTERNATIONAL FLIGHTS AND DOMESTIC FLIGHTS</div>
           </div>
           <Fromto handleChange={handleData} />
           <FareTypes />
         </Bookingcss>
+        <br/>
         <div className="button">
           <button onClick={addLocal}>
             <Link to="/search">SEARCH</Link>
