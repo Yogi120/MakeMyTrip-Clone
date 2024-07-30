@@ -105,7 +105,7 @@ export const Main = () => {
         </div>
       </Navbar>
       <div style={{ background: "#cccccc", paddingTop: "50px" }}>
-        <SmallBottom />
+        {/* <SmallBottom /> */}
         <div style={{ width: "100%", margin: "auto" }}>
           <MultipleSlidesExample />
         </div>
