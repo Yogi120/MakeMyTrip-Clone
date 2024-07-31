@@ -12,116 +12,60 @@ const Style = styled.div`
     #020420 100%
   );
   .jelo {
-    width: 100%;
-    background-color: #03032c;
-    .topdiv {
-      width: 90%;
-      height: 100px;
-      padding-bottom: 10px;
-      margin: auto;
-      display: flex;
-      justify-content: space-around;
-      padding-top: 8px;
-      align-items: center;
-      .first {
-        width: 120px;
-        padding: 0;
-        margin: 0;
-        line-height: 0px;
-        text-align: center;
-        background: rgba(104, 105, 104, 0.3);
-        border-radius: 5px;
-        p {
-          font-size: 14px;
-          font-weight: 600;
-          color: #2c98f1;
-        }
-        select {
-          border: 0px;
-          //-webkit-appearance: none;
-          -moz-appearance: none;
-          text-indent: 1px;
-          color: white;
-          font-size: 17px;
-          text-overflow: "";
-          outline: 0px;
-          width: 100%;
-          text-align: center;
-          background-color: transparent;
-          padding: 3px;
-        }
-        option {
-          background-color: #7e7e7e;
-        }
-      }
-      .second {
-        width: 170px;
-        //line-height: 0;
-        background: rgba(104, 105, 104, 0.3);
-        border-radius: 5px;
-        p {
-          font-size: 14px;
-          font-weight: 600;
-          margin-left: 10px;
-          color: #2c98f1;
-        }
-        select {
-          border: 0px;
-          //-webkit-appearance: none;
-          -moz-appearance: none;
-          text-indent: 8px;
-          color: white;
-          font-size: 17px;
-          text-overflow: "";
-          outline: 0px;
-          width: 100%;
-          background-color: #21233e;
-          padding: 3px;
-        }
-        option {
-          background-color: #494949;
-        }
-      }
-      button {
-        width: 170px;
-        height: 45px;
-        border-radius: 25px;
-        background: linear-gradient(
-          to right,
-          #8f92fa 0%,
-          #6165f0 50%,
-          #6c70eb 50%,
-          #3339e9 100%
-        );
-        border: none;
-        color: white;
-        font-weight: 700;
-        font-size: 20px;
-      }
-    }
-  }
-  .hello {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-  }
-  .fromtodiv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 87%;
-    p {
-      font-size: 14px;
-      font-weight: 600;
-      margin-left: 10px;
-      color: #2c98f1;
-    }
-  }
-  .date {
-    border: none;
-    font-size: 16px;
-    margin-left: 10px;
+    background-color: #002f6c; /* Dark blue background */
+    padding: 20px;
     color: white;
-    background-color: transparent;
+  }
+  
+  .topdiv {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .input-item {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input-item p {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .input-item select, .input-item input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+  }
+  
+  .search-button {
+    margin-top: 32px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
   }
 `;
 
@@ -192,99 +136,86 @@ export const SearchBox = ({ handle }) => {
     <Style>
       <div className={nav === true ? "hello jelo" : "jelo"}>
         <div className="topdiv">
-          <div className="first">
-            <p>Trip Type</p>
-            <select
-              name="trip"
-              id="trip"
-              onChange={handleSelect}
-              value={select.trip}
-            >
-              <option value="">Select</option>
-              <option value="oneway">Oneway</option>
-              <option value="twoway">Twoway</option>
-            </select>
+          <div className="input-group">
+            <div className="input-item">
+              <p>Trip Type</p>
+              <select
+                name="trip"
+                id="trip"
+                onChange={handleSelect}
+                value={select.trip}
+              >
+                <option value="">Select</option>
+                <option value="oneway">Oneway</option>
+                <option value="twoway">Twoway</option>
+              </select>
+            </div>
+            <div className="input-item">
+              <p>From</p>
+              <select
+                onChange={handleSelect}
+                name="from"
+                id="from"
+                value={select.from}
+              >
+                <option value="">Select</option>
+                {text.map((e) => (
+                  <option value={e.cityName} key={e.cityName}>
+                    {e.cityName}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="input-item">
+              <p>To</p>
+              <select onChange={handleSelect} name="to" id="to" value={select.to}>
+                <option value="">Select</option>
+                {text.map((e) => (
+                  <option value={e.cityName} key={e.cityName}>
+                    {e.cityName}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="input-item">
+              <p>Depart</p>
+              <input
+                name="DepartDate"
+                type="date"
+                id="DepartDate"
+                className="date"
+                value={select.DepartDate}
+                onChange={handleSelect}
+              />
+            </div>
+            <div className="input-item">
+              <p>Return</p>
+              <input
+                name="ReturnDate"
+                type="date"
+                id="returndate"
+                className="date"
+                onChange={handleSelect}
+                value={select.ReturnDate}
+              />
+            </div>
+            <div className="input-item">
+              <p>Traveller and Class</p>
+              <select
+                onChange={handleSelect}
+                name="TravellerClass"
+                id="TravellerClass"
+                value={select.TravellerClass}
+              >
+                <option value="">Select</option>
+                <option value="Economy">Economy</option>
+                <option value="Premium">Premium</option>
+              </select>
+            </div>
+            <div className="input-item">
+              <button className="search-button" onClick={handleButton}>SEARCH</button>
+            </div>
           </div>
-          <div className="second">
-            <p>From</p>
-
-            <select
-              onChange={handleSelect}
-              name="from"
-              id="from"
-              value={select.from}
-            >
-              <option value="">Select</option>
-              {text.map((e) => (
-                <option value={e.cityName} key={e.cityName}>
-                  {e.cityName}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="second">
-            <p>To</p>
-
-            <select onChange={handleSelect} name="to" id="to" value={select.to}>
-              <option value="">Select</option>
-              {text.map((e) => (
-                <option value={e.cityName} key={e.cityName}>
-                  {e.cityName}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="second">
-            <p>Depart</p>
-            <input
-              name="DepartDate"
-              type="date"
-              id="DepartDate"
-              className="date"
-              value={select.DepartDate}
-              onChange={handleSelect}
-              style={{
-                border: "none",
-                backgroundColor: "transparent",
-                color: "white",
-                fontSize: "17px",
-                padding: "3px",
-              }}
-            />
-          </div>
-          <div className="second">
-            <p>Return</p>
-            <input
-              name="ReturnDate"
-              type="date"
-              id="returndate"
-              className="date"
-              onChange={handleSelect}
-              value={select.ReturnDate}
-              style={{
-                border: "none",
-                backgroundColor: "transparent",
-                color: "white",
-                fontSize: "17px",
-                padding: "3px",
-              }}
-            />
-          </div>
-          <div className="second">
-            <p>Traveller and Class</p>
-
-            <select
-              onChange={handleSelect}
-              name="TravellerClass"
-              id="TravellerClass"
-              value={select.TravellerClass}
-            >
-              <option value="">Select</option>
-              <option value="Economy">Economy</option>
-              <option value="Premium">Premium</option>
-            </select>
-          </div>
-          <button onClick={handleButton}>SEARCH</button>
         </div>
       </div>
     </Style>
