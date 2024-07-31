@@ -13,7 +13,7 @@ export const Navbar = styled.div`
     position: absolute;
     left: 70px;
     top: 10px;
-    width: 8%;
+    width: 10%;
   }
   .topdiv {
     padding-top: 20px;
